@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name":             "Github LGTM",
+  "description":      "Display code review status on github",
+  "version":          "0.0.2",
+
+  "short_name":       "LGTM",
+
+  "permissions": [
+    "storage"
+  ],
+
+  "icons": {
+     "128": "res/icon.png"
+  },
+
+  "content_scripts": [ {
+     "js":      [ "js/jquery-2.1.1.min.js", "js/mustache.js", "js/lgtm.js" ],
+     "css":     [ "css/lgtm.css" ],
+     "matches": [ "https://github.com/*" ]
+  } ],
+
+  "web_accessible_resources": [ "css/lgtm.css", "templates/*", "js/pushstate.js" ],
+
+  "options_page": "options/options.html"
+}

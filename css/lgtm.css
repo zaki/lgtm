@@ -1,0 +1,6 @@
+.lgtm-status { color: #555; display: inline-block; padding-left: 5px; }
+.lgtm-status .octicon { font-size: 15px; }
+.lgtm-pr-status { margin-top: 15px; border-top: 1px solid #eee; }
+.lgtm-status-item { display: inline-block; }
+.lgtm-vote-count { font-size: 16px; }
+.lgtm-wip, .lgtm-wip:hover { background-color: rgba(0, 0, 0, 0.2) !important; }
