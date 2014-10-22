@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name":             "Github LGTM",
   "description":      "Display code review status on github",
-  "version":          "0.0.2",
+  "version":          "1.0.0",
 
   "short_name":       "LGTM",
 
