@@ -20,7 +20,11 @@
      "matches": [ "https://github.com/*" ]
   } ],
 
-  "web_accessible_resources": [ "css/lgtm.css", "templates/*", "js/pushstate.js" ],
+  "background": {
+    "scripts": [ "js/background.js" ]
+  },
+
+  "web_accessible_resources": [ "css/lgtm.css", "templates/*", "js/pushstate.js", "res/favicon.png" ],
 
   "options_page": "options/options.html"
 }

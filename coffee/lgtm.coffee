@@ -132,9 +132,19 @@ class LGTM
 
       [count, votes] = @countVotes($(".view-pull-request"))
       @addVotes(count, votes, $(".discussion-sidebar"))
+      @setFavicon(count)
 
       $(".table-list-issues .table-list-item").each (_, issue) =>
         @processPullRequest($(".issue-title-link", issue).prop("href"), issue)
+
+  setFavicon: (count) ->
+    favicon = $("link[type='image/x-icon']")
+    if count
+      chrome.runtime.sendMessage { message: "lgtm:update-favicon", count: count }, (response) ->
+        favicon.prop "href", response.dataurl
+    else
+      favicon.prop "href", "https://assets-cdn.github.com/favicon.ico"
+
 
 inject = $("<script>")
 inject.prop("src", chrome.extension.getURL("js/pushstate.js"))
