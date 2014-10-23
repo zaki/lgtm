@@ -16,6 +16,7 @@ class LGTM
 
   regexify: (string) ->
     $.map string.split(/\n/), (sub) ->
+      return null if sub.length == 0 || !sub.trim()
       RegExp(sub.replace(/[\-\/\\\^\$\*\+\?\.\(\)\|\[\]\{\}]/g, "\\$&"), "gi")
 
   formatCount: (count) ->
