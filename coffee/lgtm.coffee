@@ -3,7 +3,7 @@ class LGTM
   @positiveKeywordsRegexes = []
   @negativeKeywordsRegexes = []
 
-  @defaultOptions =
+  @defaultOptions:
     "positive-keywords": ":+1:\nlgtm\n:thumbsup:"
     "negative-keywords": ":-1:\n:thumbsdown:"
     "disable-merge": false
@@ -110,14 +110,15 @@ class LGTM
 
   refresh: () ->
     chrome.storage.sync.get null, (items) =>
-      items["positive-keywords"]       ||= @defaultOptions["positive-keywords"]
-      items["negative-keywords"]       ||= @defaultOptions["negative-keywords"]
-      items["disable-merge-threshold"] ||= @defaultOptions["disable-merge-threshold"]
+      defaultOptions = @constructor.defaultOptions
+      items["positive-keywords"]       ||= defaultOptions["positive-keywords"]
+      items["negative-keywords"]       ||= defaultOptions["negative-keywords"]
+      items["disable-merge-threshold"] ||= defaultOptions["disable-merge-threshold"]
 
-      items["disable-merge"] = @defaultOptions["disable-merge"] if items["disable-merge"] == null
+      items["disable-merge"] = defaultOptions["disable-merge"] if items["disable-merge"] == null
 
-      items["disable-wip"] = @defaultOptions["disable-wip"] if items["disable-wip"] == null
-      items["disable-wip-keywords"]    ||= @defaultOptions["disable-wip-keywords"]
+      items["disable-wip"] = defaultOptions["disable-wip"] if items["disable-wip"] == null
+      items["disable-wip-keywords"]    ||= defaultOptions["disable-wip-keywords"]
 
       @positiveKeywordsRegexes   = @regexify(items["positive-keywords"])
       @negativeKeywordsRegexes   = @regexify(items["negative-keywords"])

@@ -13,7 +13,7 @@ $(function() {
   function loadOptions() {
     chrome.storage.sync.get(null, function(items) {
       for (var property in defaultOptions) {
-          if (items[property] === null) { items[property] = defaultOptions[property]; }
+          if (items[property] == null) { items[property] = defaultOptions[property]; }
       }
 
       $("#positive-keywords").val(items["positive-keywords"]);
