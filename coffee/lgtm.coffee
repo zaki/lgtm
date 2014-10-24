@@ -10,6 +10,7 @@ class LGTM
     "disable-merge-threshold": 2
     "disable-wip": false
     "disable-wip-keywords": "wip\ndo not merge"
+    "change-favicon": true
 
   initialize: () ->
     refresh()
@@ -121,6 +122,8 @@ class LGTM
       items["disable-wip"] = defaultOptions["disable-wip"] if items["disable-wip"] == null
       items["disable-wip-keywords"]    ||= defaultOptions["disable-wip-keywords"]
 
+      items["change-favicon"] = defaultOptions["change-favicon"] if items["change-favicon"] == null
+
       @positiveKeywordsRegexes   = @regexify(items["positive-keywords"])
       @negativeKeywordsRegexes   = @regexify(items["negative-keywords"])
 
@@ -130,9 +133,11 @@ class LGTM
       @disableWIP                = items["disable-wip"]
       @disableWIPKeywordsRegexes = @regexify(items["disable-wip-keywords"])
 
+      @changeFavicon             = items["change-favicon"]
+
       [count, votes] = @countVotes($(".view-pull-request"))
       @addVotes(count, votes, $(".discussion-sidebar"))
-      @setFavicon(count)
+      @setFavicon(count) if @changeFavicon
 
       $(".table-list-issues .table-list-item").each (_, issue) =>
         @processPullRequest($(".issue-title-link", issue).prop("href"), issue)

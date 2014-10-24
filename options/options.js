@@ -7,7 +7,9 @@ $(function() {
     "disable-merge-threshold": 2,
 
     "disable-wip": false,
-    "disable-wip-keywords": "wip\ndo not merge"
+    "disable-wip-keywords": "wip\ndo not merge",
+
+    "change-favicon": true
   }
 
   function loadOptions() {
@@ -23,6 +25,8 @@ $(function() {
 
       $("#disable-wip").prop("checked", items["disable-wip"]);
       $("#disable-wip-keywords").val(items["disable-wip-keywords"]);
+
+      $("#change-favicon").prop("checked", items["change-favicon"]);
     });
   }
 
@@ -35,7 +39,9 @@ $(function() {
       "disable-merge-threshold": $("#disable-merge-threshold").val(),
 
       "disable-wip": $("#disable-wip").prop("checked"),
-      "disable-wip-keywords": $("#disable-wip-keywords").val()
+      "disable-wip-keywords": $("#disable-wip-keywords").val(),
+
+      "change-favicon": $("#change-favicon").prop("checked")
     });
   }
 
