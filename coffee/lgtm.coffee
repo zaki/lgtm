@@ -6,9 +6,9 @@ class LGTM
   @defaultOptions:
     "positive-keywords": ":+1:\nlgtm\n:thumbsup:"
     "negative-keywords": ":-1:\n:thumbsdown:"
-    "disable-merge": false
-    "disable-merge-threshold": 2
-    "disable-wip": false
+    "disable-merge": true
+    "disable-merge-threshold": 3
+    "disable-wip": true
     "disable-wip-keywords": "wip\ndo not merge"
     "change-favicon": true
 
