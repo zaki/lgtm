@@ -101,13 +101,13 @@ class LGTM
       $(page).append(container)
 
     if @disableMerge and count < @disableMergeThreshold
-      $(".merge-branch-action").prop("disabled", true)
-      $(".merge-branch-action").text("Not reviewed")
+      $(".js-merge-branch-action").prop("disabled", true)
+      $(".js-merge-branch-action").text("Not reviewed")
 
     title = $(".js-issue-title").html()
     if @isWIP(title)
-      $(".merge-branch-action").prop("disabled", true)
-      $(".merge-branch-action").text("WIP")
+      $(".js-merge-branch-action").prop("disabled", true)
+      $(".js-merge-branch-action").text("WIP")
 
 
   refresh: () ->
