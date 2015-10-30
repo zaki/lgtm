@@ -6,9 +6,9 @@ class LGTM
   @defaultOptions:
     "positive-keywords": ":+1:\nlgtm\n:thumbsup:"
     "negative-keywords": ":-1:\n:thumbsdown:"
-    "disable-merge": false
-    "disable-merge-threshold": 2
-    "disable-wip": false
+    "disable-merge": true
+    "disable-merge-threshold": 3
+    "disable-wip": true
     "disable-wip-keywords": "wip\ndo not merge"
     "change-favicon": true
 
@@ -101,13 +101,13 @@ class LGTM
       $(page).append(container)
 
     if @disableMerge and count < @disableMergeThreshold
-      $(".merge-branch-action").prop("disabled", true)
-      $(".merge-branch-action").text("Not reviewed")
+      $(".js-merge-branch-action").prop("disabled", true)
+      $(".js-merge-branch-action").text("Not reviewed")
 
     title = $(".js-issue-title").html()
     if @isWIP(title)
-      $(".merge-branch-action").prop("disabled", true)
-      $(".merge-branch-action").text("WIP")
+      $(".js-merge-branch-action").prop("disabled", true)
+      $(".js-merge-branch-action").text("WIP")
 
 
   refresh: () ->

@@ -3,10 +3,10 @@ $(function() {
     "positive-keywords": ":+1:\nlgtm\n:thumbsup:",
     "negative-keywords": ":-1:\n:thumbsdown:",
 
-    "disable-merge": false,
-    "disable-merge-threshold": 2,
+    "disable-merge": true,
+    "disable-merge-threshold": 3,
 
-    "disable-wip": false,
+    "disable-wip": true,
     "disable-wip-keywords": "wip\ndo not merge",
 
     "change-favicon": true
