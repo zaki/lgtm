@@ -100,15 +100,17 @@ class LGTM
 
       $(page).append(container)
 
+    mergeButtonClass = ".js-merge-branch-action"
+
     if @disableMerge and count < @disableMergeThreshold
-      $(".merge-branch-action").prop("disabled", true)
-      $(".merge-branch-action").text("Not reviewed")
+      $(mergeButtonClass).prop("disabled", true)
+      $(mergeButtonClass).text("Not reviewed")
 
     title = $(".js-issue-title").html()
+    console.log(@mergeButtonClass)
     if @isWIP(title)
-      $(".merge-branch-action").prop("disabled", true)
-      $(".merge-branch-action").text("WIP")
-
+      $(mergeButtonClass).prop("disabled", true)
+      $(mergeButtonClass).text("WIP")
 
   refresh: () ->
     chrome.storage.sync.get null, (items) =>
@@ -135,7 +137,7 @@ class LGTM
 
       @changeFavicon             = items["change-favicon"]
 
-      [count, votes] = @countVotes($(".view-pull-request"))
+      [count, votes] = @countVotes($(".discussion-timeline"))
       @addVotes(count, votes, $(".discussion-sidebar"))
       @setFavicon(count) if @changeFavicon
 
