@@ -1,0 +1,33 @@
+{
+  "extensionName": { "message": "Github LGTM", "description": "extension title" },
+  "extensionDescription": { "message": "Githubプルリクエストのレビュー状況を表示する", "description": "extension description" },
+
+  "optionsTitle": { "message": "LGTM設定", "description": "options title" },
+  "keywordsTab": { "message": "キーワード", "description": "keywords tab" },
+  "mergeTab": { "message": "マージボタン", "description": "merge tab" },
+  "extrasTab": { "message": "その他", "description": "extras tab" },
+  "aboutTab": { "message": "LGTMについて", "description": "about tab" },
+
+  "positiveKeywords": { "message": "ポジティブ評価キーワード", "description": "positive keywords" },
+  "positiveKeywordsHelp": { "message": "＋１と認めるキーワードの一覧（１行に１キーワード）<br/>例えば：:+1:, LGTM, :thumbsup:, :sushi:<br/>大文字と小文字が区別されないのでご注意<br/><strong>ヒント:</strong> :+1:や:thumbsup:などの<a href=\"http://emoji-cheat-sheet.com\">絵文字</a>も使えます。", "description": "positive keywords" },
+
+  "negativeKeywords": { "message": "ネガティブ評価キーワード", "description": "negative keywords" },
+  "negativeKeywordsHelp": { "message": "ー１と認めるキーワードの一覧（１行に１キーワード）<br/>例えば：:-1:, REJECTED, :thumbsdown:<br/>大文字と小文字が区別されないのでご注意<br/><strong>ヒント:</strong> :-1:や:poop:や:scream_cat:などの<a href=\"http://emoji-cheat-sheet.com\">絵文字</a>も使えます。", "description": "negative keywords" },
+
+  "disableMerge": { "message": "メージボタン無効化", "description": "disable merge" },
+  "disableMergeHelp": { "message": "ポジティブ評価が足りない時マージボタンを無効にする", "description": "disable merge help" },
+  "disableMergeThreshold": { "message": "有効に必要評価数", "description": "disable merge threshold" },
+  "disableMergeThresholdHelp": { "message": "マージするに必要な最低ポジティブ評価数<br/>例えば２と設定すれば<strong>+1</strong>二つそして<strong>-1</strong>一つ（つまり合計＋１）でマージボタンを無効化される。", "description": "disable merge help" },
+  "disableWip": { "message": "WIPを無効化", "description": "disable wip" },
+  "disableWipHelp": { "message": "ＷＩＰ（ワークインプログレス）なプルリクエストのマージボタんを無効化する<br/>このオプションがオンになるとプルリクエスト一覧画面でＷＩＰがグレイになる。", "description": "disable merge help" },
+  "disableWipKeywords": { "message": "WIPキーワード", "description": "disable wip keywords" },
+  "disableWipKeywordsHelp": { "message": "プルリクエストの<strong>タイトル</strong>に書けばWIPと満たされるキーワード一覧<br/>１行に１キーワード、大文字と小文字が区別されない", "description": "disable merge help" },
+
+  "dynamicFavicon": { "message": "faviconを切り替える", "description": "dynamic favicon" },
+  "dynamicFaviconHelp": { "message": "評価数によってプルリクエスト詳細ページのfaviconにバッジを表示します。<br/>他の拡張でfaviconを変えている場合（例えばCIステータス色など）、この機能を無効にしてください。", "description": "dynamic favicon help" },
+
+  "save": { "message": "保存", "description": "save" },
+  "reset": { "message": "初期値にリセット", "description": "reset" },
+
+  "reviewTitle": { "message": "レビュー", "description": "review title" }
+}

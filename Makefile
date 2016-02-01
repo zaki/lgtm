@@ -14,4 +14,4 @@ clean:
 	rm lgtm.zip
 
 zip: coffee
-	zip -r lgtm.zip css js options res templates manifest.json
+	zip -r lgtm.zip css js options res templates _locales manifest.json

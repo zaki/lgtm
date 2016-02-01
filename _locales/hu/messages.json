@@ -1,0 +1,33 @@
+{
+  "extensionName": { "message": "Github LGTM", "description": "extension title" },
+  "extensionDescription": { "message": "Code review állapot megjelenítése a github pull request oldalain", "description": "extension description" },
+
+  "optionsTitle": { "message": "LGTM Beállítások", "description": "options title" },
+  "keywordsTab": { "message": "Kulcsszavak", "description": "keywords tab" },
+  "mergeTab": { "message": "Merge", "description": "merge tab" },
+  "extrasTab": { "message": "Extrák", "description": "extras tab" },
+  "aboutTab": { "message": "Az LGTM-ről", "description": "about tab" },
+
+  "positiveKeywords": { "message": "Pozitív kulcsszavak", "description": "positive keywords" },
+  "positiveKeywordsHelp": { "message": "Azon szavak listája amelyek +1-nek számítanak. Soronként egy kucsszó, például: :+1:, LGTM, :thumbsup:<br />A kis- és nagybetűk között nem tesz különbséget.<br/><strong>TIPP:</strong> <a href=\"http://emoji-cheat-sheet.com\">Emoji</a>-k, mint például :+1: vagy :thumbsup: is használhatók.", "description": "positive keywords" },
+
+  "negativeKeywords": { "message": "Negatív kulcsszavak", "description": "negative keywords" },
+  "negativeKeywordsHelp": { "message": "Azon szavak listája amelyek -1-nek számítanak. Soronként egy kucsszó, például: :-1:, REJECTED, :thumbsdown:<br />A kis- és nagybetűk között nem tesz különbséget.<br/><strong>TIPP:</strong> <a href=\"http://emoji-cheat-sheet.com\">Emoji</a>-k, mint például :-1:, :poop: vagy :scream_cat: is használhatók.", "description": "negative keywords" },
+
+  "disableMerge": { "message": "Merge Letiltása", "description": "disable merge" },
+  "disableMergeHelp": { "message": "Amennyiben nincs elég pozitív review, letiltja a merge gombot.", "description": "disable merge help" },
+  "disableMergeThreshold": { "message": "Merge letiltás határa", "description": "disable merge threshold" },
+  "disableMergeThresholdHelp": { "message": "A merge engedélyezéséhez szükséges minimum pozitív review-k száma.<br />Például \"2\" esetében egy olyan pull requesten, amin két <strong>+1</strong> és egy <strong>-1</strong> komment van, (azaz összességében +1) a merge gomb letiltásra kerül.", "description": "disable merge help" },
+  "disableWip": { "message": "WIP-ek letiltása", "description": "disable wip" },
+  "disableWipHelp": { "message": "A WIP-nek (work-in-progress/folyamatban) jelölt pull requestek merge gombja letiltásra kerül.<br />A pull request listában is szürkén fog megjelenni a pull request.", "description": "disable merge help" },
+  "disableWipKeywords": { "message": "WIP kulcsszavak", "description": "disable wip keywords" },
+  "disableWipKeywordsHelp": { "message": "Amennyiben ezek a kulcsszavak szerepelnek a pull request <strong>címében</strong>, a pull request WIP-ként lesz értelmezve.<br />Soronként egy kulcsszó, nem tesz különbséget kis- és nagybetűk között.", "description": "disable merge help" },
+
+  "dynamicFavicon": { "message": "A favicon automatikus megváltoztatása", "description": "dynamic favicon" },
+  "dynamicFaviconHelp": { "message": "A pull request részletei oldalán megjeleníti a review szavazatszámát a faviconon.<br />Amennyiben egy másik bővítmény már megváltoztatja a favicont (pl CI állapotszínek), letilthatja ezt a funkciót.", "description": "dynamic favicon help" },
+
+  "save": { "message": "Mentés", "description": "save" },
+  "reset": { "message": "At eredeti beállítások visszaállítása", "description": "reset" },
+
+  "reviewTitle": { "message": "Review", "description": "review title" }
+}

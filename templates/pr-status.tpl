@@ -1,6 +1,6 @@
 <div class="discussion-sidebar-item lgtm-pr-status">
   <div class="participation">
-    <h3 class="discussion-sidebar-heading">Review</h3>
+    <h3 class="discussion-sidebar-heading">{{review}}</h3>
     <div class="participation avatars">
       <div class="lgtm-status-item lgtm-vote-count">{{count}}</div>
       <div class="lgtm-status-item">

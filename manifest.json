@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name":             "Github LGTM",
-  "description":      "Display code review status on github",
   "version":          "1.1.2",
+  "name":             "__MSG_extensionName__",
+  "description":      "__MSG_extensionDescription__",
 
   "short_name":       "LGTM",
 
@@ -26,5 +26,7 @@
 
   "web_accessible_resources": [ "css/lgtm.css", "templates/*", "js/pushstate.js", "res/favicon.png" ],
 
-  "options_page": "options/options.html"
+  "options_page": "options/options.html",
+
+  "default_locale": "en"
 }

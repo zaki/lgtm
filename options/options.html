@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LGTM Options</title>
+    <title></title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
@@ -9,34 +9,30 @@
   </head>
   <body>
     <div class="container">
-      <h2>LGTM Options</h2>
+      <h2 id="lgtm-options"></h2>
 
       <form action="" role="form" id="save-options">
         <ul class="nav nav-tabs" role="tablist">
-          <li class="active"><a href="#keywords" role="tab" data-toggle="tab">Keywords</a></li>
-          <li><a href="#merge" role="tab" data-toggle="tab">Merge Button</a></li>
-          <li><a href="#extras" role="tab" data-toggle="tab">Extras</a></li>
-          <li><a href="#about" role="tab" data-toggle="tab">About</a></li>
+          <li class="active"><a href="#keywords" id="keywords-tab" role="tab" data-toggle="tab">Keywords</a></li>
+          <li><a id="merge-tab" href="#merge" role="tab" data-toggle="tab">Merge Button</a></li>
+          <li><a id="extras-tab" href="#extras" role="tab" data-toggle="tab">Extras</a></li>
+          <li><a id="about-tab" href="#about" role="tab" data-toggle="tab">About</a></li>
         </ul>
 
         <div class="tab-content">
           <div class="tab-pane active" id="keywords">
             <br />
             <div class="form-group">
-              <label for="positive-keywords">Positive Keywords</label>
+              <label id="positive-keywords-label" for="positive-keywords">Positive Keywords</label>
               <br/>
               <textarea id="positive-keywords" class="form-control" rows="5"></textarea>
-              <p class="help-block">
-                Keywords that act as a +1, one keyword per line. Examples: :+1:, LGTM, :thumbsup:<br/>
-                Keywords are case-insensitive.<br/>
-                <strong>TIP:</strong> <a href="http://emoji-cheat-sheet.com">Emoji</a> like :+1: or :thumbsup: can be used as keywords.
-              </p>
+              <p class="help-block" id="positive-keywords-help"></p>
             </div>
             <div class="form-group">
-              <label for="negative-keywords">Negative Keywords</label>
+              <label id="negative-keywords-label" for="negative-keywords">Negative Keywords</label>
               <br/>
               <textarea id="negative-keywords" class="form-control" rows="5"></textarea>
-              <p class="help-block">
+              <p class="help-block" id="negative-keywords-help">
                 Keywords that act as a -1, one keyword per line. Examples: :-1:, REJECTED, :thumbsdown:<br/>
                 Keywords are case-insensitive.<br/>
                 <strong>TIP:</strong> <a href="http://emoji-cheat-sheet.com">Emoji</a> like :-1:, :poop: or :scream_cat: can be used as keywords.
@@ -48,16 +44,18 @@
             <br />
             <div class="form-group">
               <label for="disable-merge">
-                Disable merge
+                <span id="disable-merge-label">Disable merge</span>
                 <input id="disable-merge" type="checkbox" value="">
               </label>
               <br/>
-              <p class="help-block">Disable merge button if there are not enough positive reviews</p>
+              <p class="help-block" id="disable-merge-help">
+              Disable merge button if there are not enough positive reviews
+              </p>
 
-              <label for="disable-merge-threshold">Disable merge threshold</label>
+              <label for="disable-merge-threshold" id="disable-merge-threshold-label">Disable merge threshold</label>
               <br />
               <input id="disable-merge-threshold" type="text" class="form-control">
-              <p class="help-block">
+              <p class="help-block" id="disable-merge-threshold-help">
                 The minimum amount of positive reviews needed to merge<br />
                 For example if set to 2, a pull request with two <strong>+1</strong>s and one <strong>-1</strong> (ie. +1 overall) will have a disabled merge button
               </p>
@@ -67,19 +65,19 @@
 
             <div class="form-group">
               <label for="disable-wip">
-                Disable WIP
+                <span id="disable-wip-label">Disable WIP</span>
                 <input id="disable-wip" type="checkbox" value="">
               </label>
               <br/>
-              <p class="help-block">
+              <p class="help-block" id="disable-wip-help">
                 Disable merge button if pull request is marked as work-in-progress.<br/>
                 Enabling this option will also grey out the pull request in the pull request list.
               </p>
 
-              <label for="disable-wip-keywords">Disable WIP keywords</label>
+              <label for="disable-wip-keywords" id="disable-wip-keywords-label">Disable WIP keywords</label>
               <br />
               <textarea id="disable-wip-keywords" class="form-control" rows="5"></textarea>
-              <p class="help-block">
+              <p class="help-block" id="disable-wip-keywords-help">
                 Keywords in pull request <strong>title</strong> to signify WIP. One per line.<br/>
                 Keywords are case-insensitive
               </p>
@@ -89,11 +87,11 @@
             <br />
             <div class="form-group">
               <label for="change-favicon">
-                Dynamically change favicon
+                <span id="dynamic-favicon">Dynamically change favicon</span>
                 <input id="change-favicon" type="checkbox" value="">
               </label>
               <br/>
-              <p class="help-block">
+              <p class="help-block" id="dynamic-favicon-help">
                 Add a badge with the vote count to the favicon on the pull request details page.<br/>
                 If you have another extension that changes the favicon (eg. CI status color), you can disable this feature.
               </p>

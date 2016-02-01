@@ -50,7 +50,45 @@ $(function() {
     loadOptions();
   }
 
+  function localize(selector, property, message) {
+    document.querySelector(selector)[property] = chrome.i18n.getMessage(message);
+  }
+
+  function loadI18N() {
+    localize("title", "innerText", "optionsTitle");
+    localize("#lgtm-options", "innerText", "optionsTitle");
+    localize("#keywords-tab", "innerText", "keywordsTab");
+    localize("#merge-tab", "innerText", "mergeTab");
+    localize("#extras-tab", "innerText", "extrasTab");
+    localize("#about-tab", "innerText", "aboutTab");
+
+    localize("#positive-keywords-label", "innerText", "positiveKeywords");
+    localize("#positive-keywords-help", "innerHTML", "positiveKeywordsHelp");
+
+    localize("#negative-keywords-label", "innerText", "negativeKeywords");
+    localize("#negative-keywords-help", "innerHTML", "negativeKeywordsHelp");
+
+    localize("#disable-merge-label", "innerText", "disableMerge");
+    localize("#disable-merge-help", "innerHTML", "disableMergeHelp");
+
+    localize("#disable-merge-threshold-label", "innerText", "disableMergeThreshold");
+    localize("#disable-merge-threshold-help", "innerHTML", "disableMergeThresholdHelp");
+
+    localize("#disable-wip-label", "innerText", "disableWip");
+    localize("#disable-wip-help", "innerHTML", "disableWipHelp");
+    localize("#disable-wip-keywords-label", "innerText", "disableWipKeywords");
+    localize("#disable-wip-keywords-help", "innerHTML", "disableWipKeywordsHelp");
+
+
+    localize("#dynamic-favicon", "innerText", "dynamicFavicon");
+    localize("#dynamic-favicon-help", "innerHTML", "dynamicFaviconHelp");
+
+    localize("#submit-save", "innerText", "save");
+    localize("#submit-default", "innerText", "reset");
+  }
+
   loadOptions();
+  loadI18N();
   $("#submit-save").click(saveOptions);
   $("#submit-default").click(resetOptions);
 });

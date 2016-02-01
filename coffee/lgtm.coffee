@@ -71,7 +71,8 @@ class LGTM
 
       ellipsis = if count > 5 then "&hellip;" else ""
 
-      output = Mustache.render template, { count: @formatCount(count), participants: participants[0..5], ellipsis: ellipsis }
+      review_title = chrome.i18n.getMessage("reviewTitle")
+      output = Mustache.render template, { count: @formatCount(count), participants: participants[0..5], ellipsis: ellipsis, review: review_title }
       container.html(output)
       $(".issue-meta", page).append(container)
       #$(".table-list-cell-checkbox", page).append(container)
@@ -95,7 +96,8 @@ class LGTM
       for name, reviewer of votes
         participants.push(reviewer.thumb)
 
-      output = Mustache.render template, { count: @formatCount(count), participants: participants }
+      review_title = chrome.i18n.getMessage("reviewTitle")
+      output = Mustache.render template, { count: @formatCount(count), participants: participants, review: review_title }
       container.html(output)
 
       $(page).append(container)
