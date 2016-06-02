@@ -14,7 +14,7 @@
   "negativeKeywords": { "message": "ネガティブ評価キーワード", "description": "negative keywords" },
   "negativeKeywordsHelp": { "message": "ー１と認めるキーワードの一覧（１行に１キーワード）<br/>例えば：:-1:, REJECTED, :thumbsdown:<br/>大文字と小文字が区別されないのでご注意<br/><strong>ヒント:</strong> :-1:や:poop:や:scream_cat:などの<a href=\"http://emoji-cheat-sheet.com\">絵文字</a>も使えます。", "description": "negative keywords" },
 
-  "disableMerge": { "message": "メージボタン無効化", "description": "disable merge" },
+  "disableMerge": { "message": "マージボタン無効化", "description": "disable merge" },
   "disableMergeHelp": { "message": "ポジティブ評価が足りない時マージボタンを無効にする", "description": "disable merge help" },
   "disableMergeThreshold": { "message": "有効に必要評価数", "description": "disable merge threshold" },
   "disableMergeThresholdHelp": { "message": "マージするに必要な最低ポジティブ評価数<br/>例えば２と設定すれば<strong>+1</strong>二つそして<strong>-1</strong>一つ（つまり合計＋１）でマージボタンを無効化される。", "description": "disable merge help" },
